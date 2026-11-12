@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trust Counselling — Kieran, Hazel Grove, Stockport &amp; Online</title>
+<meta name="description" content="Person-centred integrative counselling with Kieran in Hazel Grove, Stockport, and online. BACP registered. Free 15-minute conversation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6efe6;--bg2:#efe5d8;--ink:#2b2a26;--mute:#6f6a5f;--line:rgba(43,42,38,.14);
+  --acc:#a5521f;--acc2:#5f7a3a;--glow:rgba(165,82,31,.25);--btn-ink:#fff;
+  --serif:'Instrument Serif',Georgia,serif;--sans:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c0d0b;--bg2:#131510;--ink:#efeae0;--mute:#9a9889;--line:rgba(239,234,224,.13);
+  --acc:#e0974f;--acc2:#8fb36a;--glow:rgba(224,151,79,.3);--btn-ink:#14100a}}
+:root[data-theme="dark"]{--bg:#0c0d0b;--bg2:#131510;--ink:#efeae0;--mute:#9a9889;--line:rgba(239,234,224,.13);--acc:#e0974f;--acc2:#8fb36a;--glow:rgba(224,151,79,.3);--btn-ink:#14100a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#fff}
+body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:70}
+.label{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:5vh}
+
+nav{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:80;display:flex;align-items:center;gap:26px;padding:9px 10px 9px 22px;border:1px solid var(--line);border-radius:100px;background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);width:max-content;max-width:calc(100vw - 24px);transition:transform .6s var(--ease)}
+nav.hide{transform:translate(-50%,-160%)}
+.logo{font-family:var(--serif);font-size:21px;white-space:nowrap}.logo i{color:var(--acc)}
+.links{display:flex;gap:22px;font-size:13px;color:var(--mute)}.links a:hover{color:var(--ink)}
+.pill{padding:9px 18px;border-radius:100px;background:var(--ink);color:var(--bg);font-size:13px;font-weight:400;white-space:nowrap}
+@media(max-width:760px){.links{display:none}nav{gap:14px}}
+
+.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 30px;border-radius:100px;font-size:15px;font-weight:400;transition:transform .5s var(--ease),box-shadow .5s}
+.btn.p{background:var(--acc);color:var(--btn-ink)}.btn.p:hover{box-shadow:0 0 50px 4px var(--glow);transform:translateY(-2px)}
+.btn.g{border:1px solid var(--line)}.btn.g:hover{border-color:var(--acc);color:var(--acc)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 5vw 9vh;overflow:hidden;isolation:isolate}
+.aurora{position:absolute;inset:-20%;z-index:-2;filter:blur(70px)}
+.aurora b{position:absolute;border-radius:50%}
+.aurora b:nth-child(1){width:50vw;height:50vw;left:5%;top:5%;background:radial-gradient(circle,rgba(190,110,40,.32),transparent 65%);animation:d1 22s ease-in-out infinite alternate}
+.aurora b:nth-child(2){width:42vw;height:42vw;right:0;top:25%;background:radial-gradient(circle,rgba(95,122,58,.32),transparent 65%);animation:d2 28s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate(12vw,8vh) scale(1.15)}}@keyframes d2{to{transform:translate(-14vw,-6vh) scale(.9)}}
+.tree{position:absolute;right:4vw;top:11vh;width:min(38vw,520px);z-index:-1;opacity:0;transition:opacity 2s .6s;animation:sway 9s ease-in-out infinite alternate;transform-origin:50% 100%}
+.loaded .tree{opacity:1}
+@keyframes sway{to{transform:rotate(1.6deg)}}
+.leaf{position:absolute;z-index:-1;width:10px;height:14px;border-radius:70% 0 70% 0;background:var(--acc);opacity:.5;animation:fall linear infinite}
+@keyframes fall{from{transform:translate(0,-10vh) rotate(0)}to{transform:translate(-14vw,110vh) rotate(380deg)}}
+.eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--acc);display:flex;align-items:center;gap:14px;margin-bottom:3vh}
+.eyebrow::before{content:"";width:40px;height:1px;background:var(--acc)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(54px,12.5vw,200px);line-height:.9;letter-spacing:-.035em}
+h1 em{color:var(--acc)}
+.ln{display:block;overflow:hidden;padding-bottom:.08em}
+.ln>span{display:block;transform:translateY(112%) rotate(3deg);transform-origin:left bottom;transition:transform 1.4s var(--ease)}
+.loaded .ln>span{transform:none}.ln:nth-child(2)>span{transition-delay:.12s}.ln:nth-child(3)>span{transition-delay:.24s}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-top:6vh;flex-wrap:wrap}
+.hero-foot p{max-width:430px;color:var(--mute);font-size:clamp(15px,1.2vw,18px)}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.fade{opacity:0;transform:translateY(24px);filter:blur(8px);transition:all 1.4s var(--ease) .7s}
+.loaded .fade{opacity:1;transform:none;filter:none}
+@media(max-width:760px){.tree{width:64vw;top:10vh;right:-8vw}}
+
+/* statement */
+.statement{padding:24vh 5vw 18vh}
+.statement p{font-family:var(--serif);font-size:clamp(32px,6vw,96px);line-height:1.06;letter-spacing:-.02em;max-width:18em}
+.w{display:inline-block;opacity:.14;filter:blur(7px);transition:opacity .5s,filter .5s;margin-right:.2em}
+.w.on{opacity:1;filter:none}.w.acc.on{color:var(--acc);font-style:italic}
+
+/* support */
+.support{padding:10vh 5vw 16vh}
+.support h2,.how h2,.price h2,.about h2{font-family:var(--serif);font-weight:400;font-size:clamp(38px,6vw,92px);line-height:1;letter-spacing:-.025em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:8vh;border-top:1px solid var(--line)}
+.card{padding:5vh 2vw 6vh 0;border-bottom:1px solid var(--line);position:relative}
+.card .n{font-family:var(--serif);font-size:clamp(60px,8vw,120px);line-height:.9;color:transparent;-webkit-text-stroke:1px var(--line);transition:all .7s var(--ease)}
+.card:hover .n{color:var(--acc);-webkit-text-stroke-color:var(--acc);transform:translateX(8px)}
+.card h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.6vw,40px);margin:14px 0 8px;line-height:1.05}
+.card p{color:var(--mute);font-size:15px;max-width:340px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+
+/* how */
+.how{display:grid;grid-template-columns:1fr 1.1fr;gap:6vw;padding:14vh 5vw;background:var(--bg2)}
+.how .sticky{position:sticky;top:16vh;align-self:start}
+.how h2 em{color:var(--acc)}
+.steps{display:flex;flex-direction:column;gap:14vh}
+.step{border-left:1px solid var(--line);padding-left:clamp(20px,3vw,44px);position:relative}
+.step::before{content:"";position:absolute;left:-4px;top:12px;width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 18px var(--acc)}
+.step .big{font-family:var(--serif);font-size:clamp(64px,9vw,140px);line-height:.9;color:var(--acc);letter-spacing:-.04em}
+.step h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.8vw,42px);margin:12px 0 8px}
+.step p{color:var(--mute);max-width:460px}
+.reveal{opacity:0;transform:translateY(50px);filter:blur(10px);transition:all 1.2s var(--ease)}
+.reveal.in{opacity:1;transform:none;filter:none}
+@media(max-width:860px){.how{grid-template-columns:1fr}.how .sticky{position:relative;top:0}.steps{gap:9vh;margin-top:6vh}}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:6vw;padding:16vh 5vw}
+.about p{color:var(--mute);margin-top:2.4vh;max-width:520px}
+.about p.lead{font-family:var(--serif);font-size:clamp(24px,2.6vw,38px);line-height:1.2;color:var(--ink);letter-spacing:-.01em}
+.badge{display:flex;align-items:center;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.seal{width:68px;height:68px;border-radius:50%;border:1px solid var(--acc);display:grid;place-items:center;color:var(--acc);font-size:12px;letter-spacing:.12em;flex:none}
+.badge b{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.2vw,32px);display:block;line-height:1.1}
+.badge span.s{font-size:13px;color:var(--mute)}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+
+/* fees */
+.price{padding:10vh 5vw 16vh}
+.price h2{margin-bottom:7vh}
+.row{display:grid;grid-template-columns:1.2fr 1.4fr .8fr;align-items:center;gap:3vw;padding:5vh 0;border-top:1px solid var(--line);transition:padding .7s var(--ease)}
+.row:last-of-type{border-bottom:1px solid var(--line)}
+.row:hover{padding-left:2vw}
+.row h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,46px);line-height:1}
+.row p{color:var(--mute);font-size:15px}
+.amt{font-family:var(--serif);font-size:clamp(64px,10vw,160px);line-height:.85;text-align:right;letter-spacing:-.04em;transition:color .5s}
+.row:hover .amt{color:var(--acc)}
+@media(max-width:760px){.row{grid-template-columns:1fr;gap:8px}.amt{text-align:left;order:-1}}
+.note{margin-top:5vh;color:var(--mute);font-size:14px}.note a{color:var(--acc);border-bottom:1px solid var(--line)}
+
+/* final */
+.final{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:16vh 5vw 8vh;overflow:hidden;isolation:isolate;background:var(--bg2)}
+.final h2{font-family:var(--serif);font-weight:400;font-size:clamp(46px,9vw,150px);line-height:.95;letter-spacing:-.035em}
+.final h2 em{color:var(--acc)}
+.final>p{color:var(--mute);margin:3vh 0 5vh;max-width:420px}
+.contact{display:grid;gap:6px;margin-top:6vh;font-size:15px;color:var(--mute)}
+.contact a{font-family:var(--serif);font-size:clamp(24px,3vw,38px);color:var(--ink);border-bottom:1px solid transparent}
+.contact a:hover{color:var(--acc)}
+footer{padding:5vh 5vw calc(5vh + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:12px;color:var(--mute);border-top:1px solid var(--line)}
+footer p{flex-basis:100%;max-width:640px;line-height:1.5}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.fade,.w,.tree{opacity:1;filter:none;transform:none}.ln>span{transform:none}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a class="logo" href="#top">Trust <i>Counselling</i></a>
+  <div class="links"><a href="#support">Support</a><a href="#how">How I work</a><a href="#about">About</a><a href="#fees">Fees</a></div>
+  <a class="pill" href="#contact">Get in touch</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="aurora"><b></b><b></b></div>
+  <svg class="tree" viewBox="0 0 400 420" aria-hidden="true">
+    <g fill="none" stroke="var(--ink)" stroke-opacity=".7" stroke-linecap="round">
+      <path d="M200 410 Q196 340 204 280 Q206 230 190 190" stroke-width="7"/>
+      <path d="M204 280 Q250 250 290 200" stroke-width="4"/><path d="M200 300 Q150 270 112 230" stroke-width="4"/>
+      <path d="M190 190 Q160 150 130 120" stroke-width="3"/><path d="M204 240 Q230 190 250 140" stroke-width="3"/>
+    </g>
+    <g opacity=".85">
+      <circle cx="200" cy="120" r="82" fill="#c9722b" fill-opacity=".55"/>
+      <circle cx="120" cy="170" r="66" fill="#7a8f3a" fill-opacity=".6"/>
+      <circle cx="285" cy="165" r="70" fill="#a5521f" fill-opacity=".55"/>
+      <circle cx="200" cy="190" r="70" fill="#5f7a3a" fill-opacity=".55"/>
+      <circle cx="150" cy="95" r="45" fill="#d9a441" fill-opacity=".5"/>
+      <circle cx="255" cy="90" r="42" fill="#8a9c3d" fill-opacity=".5"/>
+    </g>
+  </svg>
+  <span class="leaf" style="left:62%;top:0;animation-duration:16s"></span>
+  <span class="leaf" style="left:80%;top:0;animation-duration:21s;animation-delay:-8s"></span>
+  <span class="leaf" style="left:92%;top:0;animation-duration:18s;animation-delay:-3s;background:var(--acc2)"></span>
+  <div class="eyebrow fade">Counselling · Hazel Grove, Stockport &amp; online</div>
+  <h1><span class="ln"><span>Hello,</span></span><span class="ln"><span>I’m <em>Kieran.</em></span></span><span class="ln"><span>I’m glad you’re here.</span></span></h1>
+  <div class="hero-foot fade">
+    <p>You don’t need the right words, or to know exactly what you want from counselling. This is somewhere to be yourself — without judgement.</p>
+    <div class="cta">
+      <a class="btn p" href="#contact">Book a free 15-minute chat →</a>
+      <a class="btn g" href="tel:07490600342">07490 600 342</a>
+    </div>
+  </div>
+</header>
+
+<section class="statement">
+  <span class="label">( 01 — A place to begin )</span>
+  <p id="stmt">You may have been thinking about counselling for a while, or something has happened that’s left you feeling things need to change. <span class="acc">Talking about how you really feel takes strength.</span></p>
+</section>
+
+<section class="support" id="support">
+  <span class="label">( 02 — Who I work with )</span>
+  <h2>People come for<br>all sorts of reasons.</h2>
+  <div class="grid">
+    <article class="card reveal"><div class="n">01</div><h3>Anxiety &amp; stress</h3><p>When worry or pressure starts to take over, we make room to understand what’s happening.</p></article>
+    <article class="card reveal"><div class="n">02</div><h3>Low mood &amp; self-esteem</h3><p>Feeling flat, or struggling with how you see yourself — you don’t have to carry it alone.</p></article>
+    <article class="card reveal"><div class="n">03</div><h3>Relationships</h3><p>When something has happened in a relationship, a steady space to talk it through.</p></article>
+    <article class="card reveal"><div class="n">04</div><h3>Life changes</h3><p>Finding it hard to cope with change? We go at the pace that feels right for you.</p></article>
+    <article class="card reveal"><div class="n">05</div><h3>The past</h3><p>Experiences from earlier in life can still affect how you feel today.</p></article>
+    <article class="card reveal"><div class="n">06</div><h3>Men’s mental health</h3><p>I have a particular interest here, knowing how hard it can be to talk about how you really feel.</p></article>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="sticky">
+    <span class="label">( 03 — How I work )</span>
+    <h2>Time and space <em>to talk openly.</em></h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal"><div class="big">01</div><h3>Not telling you what to do</h3><p>Counselling isn’t about me deciding what’s best for you. It’s about giving you room to talk about what’s happening and, together, understanding what might be keeping you stuck.</p></div>
+    <div class="step reveal"><div class="big">02</div><h3>Person-Centred at the heart</h3><p>Listening to you, understanding your experience and accepting you without judgement.</p></div>
+    <div class="step reveal"><div class="big">03</div><h3>Integrative, where it helps</h3><p>One approach doesn’t fit everyone, so I can also draw on elements of CBT and Transactional Analysis when they may be helpful.</p></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div>
+    <span class="label">( 04 — About me )</span>
+    <h2>Trust isn’t just<br>the name above<br>the door.</h2>
+  </div>
+  <div>
+    <p class="lead">I grew up in a fostering family, and later became a foster carer myself.</p>
+    <p>From an early age I saw how people’s experiences shape the way they see themselves, their relationships and the world around them. Fostering taught me the importance of patience, consistency and, perhaps most importantly, trust.</p>
+    <p>I’m a professionally trained counsellor and a registered member of the British Association for Counselling and Psychotherapy (BACP). I work within their Ethical Framework, with regular clinical supervision and continuing professional development.</p>
+    <div class="badge" style="margin-top:5vh"><div class="seal">BACP</div><div><b>Registered Member</b><span class="s">MBACP · 415345 · Accredited Register</span></div></div>
+  </div>
+</section>
+
+<section class="price" id="fees">
+  <span class="label">( 05 — Sessions &amp; fees )</span>
+  <h2>Clear and<br>straightforward.</h2>
+  <div class="row reveal"><h3>Initial conversation</h3><p>A free 15-minute chat to see whether we’re the right fit.</p><div class="amt">Free</div></div>
+  <div class="row reveal"><h3>Face-to-face</h3><p>50 minutes, in a private, purpose-built office in Hazel Grove.</p><div class="amt">£60</div></div>
+  <div class="row reveal"><h3>Online</h3><p>50 minutes via Microsoft Teams.</p><div class="amt">£60</div></div>
+  <p class="note">Sometimes the hardest part is simply starting the conversation. <a href="#contact">Get in touch</a>.</p>
+</section>
+
+<section class="final" id="contact">
+  <span class="label">( 06 — Begin )</span>
+  <h2>Begin when<br>you’re <em>ready.</em></h2>
+  <p>If you’d like to find out more, you’re very welcome to get in touch.</p>
+  <a class="btn p" href="mailto:kieran@trust-counselling.co.uk">Email Kieran →</a>
+  <div class="contact">
+    <a href="tel:07490600342">07490 600 342</a>
+    <a href="mailto:kieran@trust-counselling.co.uk" style="font-size:clamp(18px,2.2vw,28px)">kieran@trust-counselling.co.uk</a>
+    <span>77 Macclesfield Road, Hazel Grove, Stockport, SK7 6BG</span>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Trust Counselling · Registered Member 415345 MBACP</span>
+  <a href="#top">Back to top ↑</a>
+  <p>If you are in crisis or need urgent support, call Samaritans free on 116 123, or 999 in an emergency. This service is not an emergency service.</p>
+</footer>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+requestAnimationFrame(()=>setTimeout(()=>document.body.classList.add('loaded'),150));
+const st=$('#stmt');
+st.innerHTML=st.innerHTML.replace(/(<span class="acc">)([\s\S]*?)(<\/span>)|([^<\s]+)/g,(m,a,b,c,d)=>{
+  if(a)return b.trim().split(/\s+/).map(w=>`<span class="w acc">${w}</span>`).join(' ')+' ';
+  return d?`<span class="w">${d}</span> `:m});
+const words=$$('.w'),nav=$('#nav');let last=0,tick=false;
+function onScroll(){const y=scrollY;nav.classList.toggle('hide',y>last&&y>200);last=y;
+  const t=innerHeight*.85;words.forEach(w=>w.classList.toggle('on',w.getBoundingClientRect().top<t));tick=false}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});
+$$('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3)*.08+'s';io.observe(el)});
+})();
+</script>
+</body>
+</html>
